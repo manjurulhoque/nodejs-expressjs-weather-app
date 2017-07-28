@@ -42,8 +42,6 @@ exports.home = function(req, res) {
     else if(req.method.toLowerCase() == 'post'){
         var location = req.body.location;
 
-        var d = new Date(1501236000 * );
-
         getWeather(location, function(error, result){
             if(error)
             {
@@ -62,7 +60,6 @@ exports.home = function(req, res) {
                     error : null,
                     result : result,
                     location: location,
-                    d: d
                 });
             }
         });
