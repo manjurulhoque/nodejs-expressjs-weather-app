@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<% include partials/head.ejs %>
+	</head>
+	<body>
+		<% include partials/nav.ejs %>
+
+		<div class="container">
+            <% if(result){ %>
+                <p><%= result.currently.temperature %></p>
+            <% } else if(error){ %>
+                <p><%= error %></p>
+            <% } %>
+		</div>
+
+		<% include partials/scripts.ejs %>
+	</body>
+</html>
